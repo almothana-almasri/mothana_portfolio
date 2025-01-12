@@ -37,10 +37,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Almothanna",
-    card: "summary_large_image",
-  },
   icons: {
     shortcut: "/favicon.png",
   },
