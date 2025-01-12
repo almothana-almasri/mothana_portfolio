@@ -1,6 +1,5 @@
 import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { inter } from "@/app/components/fonts";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
@@ -9,11 +8,11 @@ export const metadata: Metadata = {
     default: "Almothanna.Almassri",
     template: "%s | Almothanna.Almassri",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "DevOps, Full stack and Electrical Engineer",
   openGraph: {
     title: "Almothanna.Almassri",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+      "DevOps, Full stack and Electrical Engineer",
     url: "https://Almothanna.Almassri",
     siteName: "Almothanna.Almassri",
     images: [
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
         height: 1080,
       },
     ],
-    locale: "en-US",
+    locale: "ar_JO",
     type: "website",
   },
   robots: {
@@ -41,15 +40,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon.png",
   },
 };
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
-});
 
 export default function RootLayout({
   children,
@@ -57,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={`${inter.className} antialiased`}>
       <head>
         <Analytics />
       </head>
